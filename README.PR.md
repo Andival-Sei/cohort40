@@ -17,7 +17,7 @@
   name: 'Ваше Имя',
   tagline: 'Frontend • React • TypeScript',
   photo: 'https://example.com/your-photo.jpg',
-  bio: 'Немного о себе... (опционально)',
+  bio: 'Немного о себе... ',
   links: [
     { label: 'GitHub', url: 'https://github.com/your' },
     { label: 'Telegram', url: 'https://t.me/your' },
