@@ -5,7 +5,7 @@ import styles from '../SectionPage.module.scss'
 export default function ArtifactsPage() {
   const list = useArtifacts()
   return (
-    <main className={styles.section}>
+    <main id="main" className={styles.section}>
       <div className="container">
         <h1 className={styles.title}>Артефакты</h1>
         <div className={styles.grid}>

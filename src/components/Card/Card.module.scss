@@ -2,7 +2,7 @@
 
 .card {
   border: 1px solid $color-border;
-  background: $color-card;
+  background: linear-gradient(180deg, $color-card 0%, $color-elevated 100%);
   border-radius: $radius;
   overflow: hidden;
   box-shadow: $shadow;
@@ -30,12 +30,12 @@
 }
 
 .body {
-  padding: 12px;
+  padding: 14px 14px 16px;
 }
 
 .title {
   margin: 0 0 6px;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .text {
@@ -58,7 +58,7 @@
 
 .clickable:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+  box-shadow: $shadow-lg;
 }
 
 .clickable:active {

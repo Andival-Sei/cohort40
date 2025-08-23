@@ -7,7 +7,7 @@ import type { Student, Artifact } from '../../shared/types'
 export default function Home() {
   const { students, artifacts } = useHomeData()
   return (
-    <main>
+    <main id="main">
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.heroTitle}>Когорта №40</h1>

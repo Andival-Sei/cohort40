@@ -16,20 +16,12 @@ body,
 }
 body {
   margin: 0;
-  font-family:
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Ubuntu,
-    Cantarell,
-    Noto Sans,
-    Helvetica Neue,
-    Arial,
-    'Apple Color Emoji',
-    'Segoe UI Emoji';
+  font-family: $font-sans;
   color: $color-fg;
   background: linear-gradient(180deg, #0b0d12 0%, $color-bg 100%);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -40,6 +32,13 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+  outline: none;
+}
+
+/* Фокус для клавиатуры */
+:where(a, button, [role='button'], input, textarea, select):focus-visible {
+  outline: 2px solid $color-accent;
+  outline-offset: 2px;
 }
 
 .container {
@@ -66,3 +65,47 @@ a {
 }
 
 /* Компонентные стили вынесены в SCSS-модули */
+
+/* Варианты кнопок */
+.btn--primary {
+  border-color: transparent;
+  background: $gradient-accent;
+  color: #1a1b1e;
+  font-weight: 600;
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Ссылка-пропуск к контенту для доступности */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  transform: translateY(-150%);
+  z-index: 1000;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}

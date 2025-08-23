@@ -7,7 +7,7 @@ export default function StudentDetailPage() {
 
   if (!student) {
     return (
-      <main className={styles.section}>
+      <main id="main" className={styles.section}>
         <div className="container">
           <h1 className={styles.title}>Студент не найден</h1>
           <p>
@@ -20,7 +20,7 @@ export default function StudentDetailPage() {
   }
 
   return (
-    <main className={styles.section}>
+    <main id="main" className={styles.section}>
       <div className={`container ${styles.grid}`}>
         <section className={styles.profileCard} aria-labelledby="student-name">
           <div className={styles.avatarWrap}>

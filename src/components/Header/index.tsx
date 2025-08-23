@@ -8,8 +8,23 @@ import styles from './Header.module.scss'
 export default function Header() {
   return (
     <header className={styles.header}>
+      <a href="#main" className="skip-link btn btn--primary">
+        Перейти к контенту
+      </a>
       <div className={`container ${styles.inner}`}>
         <Link to="/" className="brand" aria-label="Когорта №40 — на главную">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.2" />
+            <path d="M6 12h12" stroke="currentColor" strokeWidth="2" />
+            <path d="M12 6v12" stroke="currentColor" strokeWidth="2" />
+          </svg>
           <strong>Когорта №40</strong>
         </Link>
         <nav className={styles.nav} aria-label="Основная навигация">

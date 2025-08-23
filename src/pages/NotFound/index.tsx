@@ -5,7 +5,7 @@ import styles from '../SectionPage.module.scss'
 export default function NotFound() {
   const message = useNotFoundMessage()
   return (
-    <main className={styles.section}>
+    <main id="main" className={styles.section}>
       <div className="container">
         <h1 className={styles.title}>{message}</h1>
         <p>

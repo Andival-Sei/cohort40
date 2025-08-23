@@ -1,18 +1,18 @@
 @use '../../styles/_vars' as *;
 
 .section {
-  padding: 28px 0 40px;
+  padding: 32px 0 48px;
 }
 
 .grid {
   display: grid;
-  gap: 16px;
+  gap: 18px;
   grid-template-columns: 320px 1fr;
 }
 
 .title {
-  font-size: 24px;
-  margin: 0 0 6px;
+  font-size: clamp(22px, 3vw, 28px);
+  margin: 0 0 8px;
 }
 
 .tagline {
@@ -38,7 +38,7 @@
 /* Профильная карточка слева */
 .profileCard {
   border: 1px solid $color-border;
-  background: $color-card;
+  background: linear-gradient(180deg, $color-card 0%, $color-elevated 100%);
   border-radius: $radius;
   box-shadow: $shadow;
   overflow: hidden;
@@ -49,7 +49,7 @@
 
 .avatarWrap {
   position: relative;
-  padding: 12px;
+  padding: 14px;
 }
 
 .avatar {
@@ -78,7 +78,7 @@
 }
 
 .profileBody {
-  padding: 0 12px 14px;
+  padding: 0 14px 16px;
 }
 
 .linkBtn {
