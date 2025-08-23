@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Card.module.scss";
+import { useCard } from "./logic";
 
 /**
  * Универсальная карточка.
@@ -13,7 +14,8 @@ export type CardProps = {
   desc?: string; // дополнительное описание, например bio студента
 };
 
-export function Card({ title, text, image, to, desc }: CardProps) {
+export default function Card({ title, text, image, to, desc }: CardProps) {
+  useCard();
   const content = (
     <>
       {image && (
@@ -39,5 +41,3 @@ export function Card({ title, text, image, to, desc }: CardProps) {
     </div>
   );
 }
-
-export default Card;

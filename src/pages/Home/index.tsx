@@ -1,16 +1,13 @@
-import Card from "../components/Card";
-import students from "../shared/students.ts";
-import artifacts from "../shared/artifacts.ts";
-import type { Student, Artifact } from "../shared/types";
+import Card from "../../components/Card";
+import { useHomeData } from "./logic";
 import styles from "./Home.module.scss";
+import type { Student, Artifact } from "../../shared/types";
 
-/**
- * Главная страница: геро-секция, список студентов, список артефактов.
- */
+/** Главная страница: геро-секция, список студентов, артефактов. */
 export default function Home() {
+  const { students, artifacts } = useHomeData();
   return (
     <main>
-      {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.heroTitle}>Когорта №40</h1>
@@ -21,7 +18,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Students */}
       <section className={styles.section} id="students">
         <div className="container">
           <h2 className={styles.sectionTitle}>Студенты</h2>
@@ -40,7 +36,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Artifacts */}
       <section className={styles.section} id="artifacts">
         <div className="container">
           <h2 className={styles.sectionTitle}>Артефакты</h2>

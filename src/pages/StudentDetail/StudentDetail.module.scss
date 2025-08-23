@@ -1,4 +1,4 @@
-@use "../styles/_vars" as *;
+@use "../../styles/_vars" as *;
 
 .section {
   padding: 28px 0 40px;
@@ -23,4 +23,9 @@
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+}
+
+// Заголовок секции описания — вместо inline-стиля
+.subTitle {
+  margin-top: 0;
 }

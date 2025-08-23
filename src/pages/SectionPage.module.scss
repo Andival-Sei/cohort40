@@ -3,12 +3,14 @@
 .section {
   padding: 28px 0 40px;
 }
+
 .title {
   font-size: 24px;
   margin: 0 0 16px;
 }
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }

@@ -5,7 +5,7 @@ import styles from "./Header.module.scss";
  * Компонент шапки сайта.
  * Держит минимальную навигацию и бренд.
  */
-export function Header() {
+export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
@@ -43,5 +43,3 @@ export function Header() {
     </header>
   );
 }
-
-export default Header;

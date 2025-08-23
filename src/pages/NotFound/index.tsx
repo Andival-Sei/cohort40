@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
-import styles from "./SectionPage.module.scss";
+import { useNotFoundMessage } from "./logic";
+import styles from "../SectionPage.module.scss";
 
-/**
- * Базовая 404 страница для несуществующих маршрутов.
- */
 export default function NotFound() {
+  const message = useNotFoundMessage();
   return (
     <main className={styles.section}>
       <div className="container">
-        <h1 className={styles.title}>Страница не найдена</h1>
+        <h1 className={styles.title}>{message}</h1>
         <p>
           Вернуться на <Link to="/">главную</Link>.
         </p>
