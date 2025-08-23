@@ -1,9 +1,9 @@
-import Card from "../../components/Card";
-import { useArtifacts } from "./logic";
-import styles from "../SectionPage.module.scss";
+import Card from '../../components/Card'
+import { useArtifacts } from './logic'
+import styles from '../SectionPage.module.scss'
 
 export default function ArtifactsPage() {
-  const list = useArtifacts();
+  const list = useArtifacts()
   return (
     <main className={styles.section}>
       <div className="container">
@@ -15,5 +15,5 @@ export default function ArtifactsPage() {
         </div>
       </div>
     </main>
-  );
+  )
 }

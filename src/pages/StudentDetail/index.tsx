@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import { useStudent } from "./logic";
-import styles from "./StudentDetail.module.scss";
+import { Link } from 'react-router-dom'
+import { useStudent } from './logic'
+import styles from './StudentDetail.module.scss'
 
 export default function StudentDetailPage() {
-  const student = useStudent();
+  const student = useStudent()
 
   if (!student) {
     return (
@@ -16,7 +16,7 @@ export default function StudentDetailPage() {
           </p>
         </div>
       </main>
-    );
+    )
   }
 
   return (
@@ -31,19 +31,11 @@ export default function StudentDetailPage() {
         </div>
         <div>
           <h2 className={styles.subTitle}>О студенте</h2>
-          <p className={styles.muted}>
-            {student.bio ?? "Описание скоро появится."}
-          </p>
+          <p className={styles.muted}>{student.bio ?? 'Описание скоро появится.'}</p>
           {student.links && student.links.length > 0 && (
             <div className={styles.links}>
               {student.links.map((l) => (
-                <a
-                  key={l.url}
-                  className="btn"
-                  href={l.url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a key={l.url} className="btn" href={l.url} target="_blank" rel="noreferrer">
                   {l.label}
                 </a>
               ))}
@@ -52,5 +44,5 @@ export default function StudentDetailPage() {
         </div>
       </div>
     </main>
-  );
+  )
 }

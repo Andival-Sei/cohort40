@@ -12,6 +12,19 @@ dist
 dist-ssr
 *.local
 
+# Env files (keep base .env tracked)
+.env.local
+.env.*.local
+
+# TypeScript build info
+*.tsbuildinfo
+
+# ESLint cache
+.eslintcache
+
+# OS-specific
+Thumbs.db
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

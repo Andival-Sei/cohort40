@@ -1,5 +1,5 @@
-import { Link, NavLink } from "react-router-dom";
-import styles from "./Header.module.scss";
+import { Link, NavLink } from 'react-router-dom'
+import styles from './Header.module.scss'
 
 /**
  * Компонент шапки сайта.
@@ -16,30 +16,24 @@ export default function Header() {
           <NavLink
             to="/"
             end
-            className={({ isActive }) =>
-              `${styles.navLink} ${isActive ? styles.active : ""}`
-            }
+            className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
           >
             Главная
           </NavLink>
           <NavLink
             to="/students"
-            className={({ isActive }) =>
-              `${styles.navLink} ${isActive ? styles.active : ""}`
-            }
+            className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
           >
             Студенты
           </NavLink>
           <NavLink
             to="/artifacts"
-            className={({ isActive }) =>
-              `${styles.navLink} ${isActive ? styles.active : ""}`
-            }
+            className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
           >
             Артефакты
           </NavLink>
         </nav>
       </div>
     </header>
-  );
+  )
 }

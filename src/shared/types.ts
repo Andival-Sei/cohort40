@@ -3,22 +3,22 @@
  */
 export type Student = {
   /** Уникальный идентификатор в URL */
-  slug: string;
+  slug: string
   /** Имя и фамилия студента */
-  name: string;
+  name: string
   /** Короткая подпись на карточке */
-  tagline: string;
+  tagline: string
   /** Фото (URL) */
-  photo: string;
+  photo: string
   /** Необязательное описание на персональной странице */
-  bio: string;
+  bio: string
   /** Необязательные ссылки (github, tg, др.) */
-  links?: { label: string; url: string }[];
-};
+  links?: { label: string; url: string }[]
+}
 
 export type Artifact = {
-  id: string;
-  title: string;
-  text: string;
-  image: string;
-};
+  id: string
+  title: string
+  text: string
+  image: string
+}

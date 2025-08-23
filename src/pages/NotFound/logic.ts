@@ -1,3 +1,3 @@
 export function useNotFoundMessage() {
-  return "Страница не найдена";
+  return 'Страница не найдена'
 }

@@ -1,0 +1,15 @@
+# Build output
+/dist
+
+# Dependencies
+/node_modules
+
+# Locks
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Misc
+coverage
+*.log
+*.snap

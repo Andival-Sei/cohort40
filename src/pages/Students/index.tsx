@@ -1,9 +1,9 @@
-import Card from "../../components/Card";
-import { useStudents } from "./logic";
-import styles from "../SectionPage.module.scss";
+import Card from '../../components/Card'
+import { useStudents } from './logic'
+import styles from '../SectionPage.module.scss'
 
 export default function StudentsPage() {
-  const students = useStudents();
+  const students = useStudents()
   return (
     <main className={styles.section}>
       <div className="container">
@@ -21,5 +21,5 @@ export default function StudentsPage() {
         </div>
       </div>
     </main>
-  );
+  )
 }

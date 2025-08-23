@@ -1,19 +1,19 @@
-import Card from "../../components/Card";
-import { useHomeData } from "./logic";
-import styles from "./Home.module.scss";
-import type { Student, Artifact } from "../../shared/types";
+import Card from '../../components/Card'
+import { useHomeData } from './logic'
+import styles from './Home.module.scss'
+import type { Student, Artifact } from '../../shared/types'
 
 /** Главная страница: геро-секция, список студентов, артефактов. */
 export default function Home() {
-  const { students, artifacts } = useHomeData();
+  const { students, artifacts } = useHomeData()
   return (
     <main>
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.heroTitle}>Когорта №40</h1>
           <p className={styles.heroSubtitle}>
-            Учебный сайт-визитка студентов Яндекс Практикума. Мы практикуемся,
-            помогаем друг другу и оставляем след в коде — вместе.
+            Учебный сайт-визитка студентов Яндекс Практикума. Мы практикуемся, помогаем друг другу и
+            оставляем след в коде — вместе.
           </p>
         </div>
       </section>
@@ -47,5 +47,5 @@ export default function Home() {
         </div>
       </section>
     </main>
-  );
+  )
 }

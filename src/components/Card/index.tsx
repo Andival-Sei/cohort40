@@ -1,21 +1,21 @@
-import { Link } from "react-router-dom";
-import styles from "./Card.module.scss";
-import { useCard } from "./logic";
+import { Link } from 'react-router-dom'
+import styles from './Card.module.scss'
+import { useCard } from './logic'
 
 /**
  * Универсальная карточка.
  * - Если передан to — рендерим ссылкой, иначе div.
  */
 export type CardProps = {
-  title: string;
-  text?: string;
-  image?: string;
-  to?: string;
-  desc?: string; // дополнительное описание, например bio студента
-};
+  title: string
+  text?: string
+  image?: string
+  to?: string
+  desc?: string // дополнительное описание, например bio студента
+}
 
 export default function Card({ title, text, image, to, desc }: CardProps) {
-  useCard();
+  useCard()
   const content = (
     <>
       {image && (
@@ -29,7 +29,7 @@ export default function Card({ title, text, image, to, desc }: CardProps) {
         {desc && <p className={styles.desc}>{desc}</p>}
       </div>
     </>
-  );
+  )
 
   return to ? (
     <Link to={to} className={styles.card} aria-label={title}>
@@ -39,5 +39,5 @@ export default function Card({ title, text, image, to, desc }: CardProps) {
     <div className={styles.card} aria-label={title}>
       {content}
     </div>
-  );
+  )
 }

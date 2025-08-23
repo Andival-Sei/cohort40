@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import { useNotFoundMessage } from "./logic";
-import styles from "../SectionPage.module.scss";
+import { Link } from 'react-router-dom'
+import { useNotFoundMessage } from './logic'
+import styles from '../SectionPage.module.scss'
 
 export default function NotFound() {
-  const message = useNotFoundMessage();
+  const message = useNotFoundMessage()
   return (
     <main className={styles.section}>
       <div className="container">
@@ -13,5 +13,5 @@ export default function NotFound() {
         </p>
       </div>
     </main>
-  );
+  )
 }
