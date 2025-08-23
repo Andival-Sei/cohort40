@@ -21,4 +21,6 @@ export type Artifact = {
   title: string
   text: string
   image: string
+  /** Дополнительное описание на странице артефакта */
+  desc?: string
 }

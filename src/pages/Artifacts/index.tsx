@@ -10,7 +10,13 @@ export default function ArtifactsPage() {
         <h1 className={styles.title}>Артефакты</h1>
         <div className={styles.grid}>
           {list.map((a) => (
-            <Card key={a.id} title={a.title} text={a.text} image={a.image} />
+            <Card
+              key={a.id}
+              title={a.title}
+              text={a.text}
+              image={a.image}
+              to={`/artifacts/${a.id}`}
+            />
           ))}
         </div>
       </div>

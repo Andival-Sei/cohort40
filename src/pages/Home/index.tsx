@@ -41,7 +41,13 @@ export default function Home() {
           <h2 className={styles.sectionTitle}>Артефакты</h2>
           <div className={styles.grid}>
             {artifacts.map((a: Artifact) => (
-              <Card key={a.id} title={a.title} text={a.text} image={a.image} />
+              <Card
+                key={a.id}
+                title={a.title}
+                text={a.text}
+                image={a.image}
+                to={`/artifacts/${a.id}`}
+              />
             ))}
           </div>
         </div>

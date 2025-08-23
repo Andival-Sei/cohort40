@@ -1,0 +1,98 @@
+@use '../../styles/_vars' as *;
+
+.section {
+  padding: 32px 0 48px;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 520px 1fr;
+}
+
+.title {
+  font-size: clamp(22px, 3vw, 28px);
+  margin: 0 0 8px;
+}
+
+.tagline {
+  margin: 0;
+  color: $color-muted;
+}
+
+.muted {
+  color: $color-muted;
+}
+
+.subTitle {
+  margin-top: 0;
+}
+
+/* Карточка медиа слева */
+.mediaCard {
+  border: 1px solid $color-border;
+  background: linear-gradient(180deg, $color-card 0%, $color-elevated 100%);
+  border-radius: $radius;
+  box-shadow: $shadow;
+  overflow: hidden;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.mediaWrap {
+  position: relative;
+  padding: 14px;
+}
+
+.media {
+  width: 100%;
+  height: auto; // сохраняем натуральные пропорции
+  border-radius: calc($radius - 2px);
+  display: block;
+  object-fit: contain; // не обрезаем изображение
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transform: translateZ(0);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    filter 220ms ease;
+}
+
+.media:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.45);
+  filter: saturate(1.05);
+}
+
+.media:active {
+  transform: translateY(0) scale(0.995);
+  filter: saturate(1);
+}
+
+.cardBody {
+  padding: 0 14px 16px;
+}
+
+/* Адаптив */
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hover эффекты */
+.mediaCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+/* Уважение к настройке уменьшения анимаций */
+@media (prefers-reduced-motion: reduce) {
+  .media,
+  .mediaCard {
+    transition: none !important;
+    transform: none !important;
+    box-shadow: $shadow !important;
+  }
+}

@@ -9,6 +9,7 @@
 - Страницы: `src/pages/<Page>/index.tsx` + соседний `logic.ts` для хуков данных/состояния. Общие стили секции — `pages/SectionPage.module.scss`.
 - Компоненты: `src/components/<Component>/{index.tsx,logic.ts,<Name>.module.scss}`. Пример: `components/Card` — универсальная карточка; если передан `to`, рендерится `<Link>`, иначе `<div>`.
 - Данные и типы: `src/shared/{types.ts,students.ts,artifacts.ts}`. UI полностью питается статичными массивами (без API).
+  - Добавление артефакта: внесите объект в `src/shared/artifacts.ts` c полями `{ id, title, text, image, desc? }`. `id` используется в URL `/artifacts/:id`.
 - Ассеты: публичные картинки лежат в `public/photo/...` и доступны как `/photo/...` (пример: `students.kir.photo = '/photo/students/kir.jpg'`).
 - Стили: глобальные — `src/styles/index.scss` (классы `container`, `btn` и переменные из `_vars.scss`); у компонентов — SCSS-модули.
 
