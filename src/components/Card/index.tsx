@@ -32,11 +32,11 @@ export default function Card({ title, text, image, to, desc }: CardProps) {
   )
 
   return to ? (
-    <Link to={to} className={styles.card} aria-label={title}>
+    <Link to={to} className={`${styles.card} ${styles.clickable}`} aria-label={title}>
       {content}
     </Link>
   ) : (
-    <div className={styles.card} aria-label={title}>
+    <div className={`${styles.card} ${styles.clickable}`} aria-label={title}>
       {content}
     </div>
   )

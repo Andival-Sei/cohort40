@@ -15,6 +15,11 @@
   margin: 0 0 6px;
 }
 
+.tagline {
+  margin: 0;
+  color: $color-muted;
+}
+
 .muted {
   color: $color-muted;
 }
@@ -28,4 +33,94 @@
 // Заголовок секции описания — вместо inline-стиля
 .subTitle {
   margin-top: 0;
+}
+
+/* Профильная карточка слева */
+.profileCard {
+  border: 1px solid $color-border;
+  background: $color-card;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  overflow: hidden;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.avatarWrap {
+  position: relative;
+  padding: 12px;
+}
+
+.avatar {
+  width: 100%;
+  border-radius: calc($radius - 2px);
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transform: translateZ(0); // для четкой анимации
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    filter 220ms ease;
+}
+
+.avatar:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.45);
+  filter: saturate(1.05);
+}
+
+.avatar:active {
+  transform: translateY(0) scale(0.995);
+  filter: saturate(1);
+}
+
+.profileBody {
+  padding: 0 12px 14px;
+}
+
+.linkBtn {
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+  will-change: transform;
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 2px;
+  }
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hover эффекты */
+.profileCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+/* Уважение к настройке уменьшения анимаций */
+@media (prefers-reduced-motion: reduce) {
+  .avatar,
+  .linkBtn,
+  .profileCard {
+    transition: none !important;
+    transform: none !important;
+    box-shadow: $shadow !important;
+  }
 }

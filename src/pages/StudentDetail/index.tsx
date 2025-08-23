@@ -22,20 +22,30 @@ export default function StudentDetailPage() {
   return (
     <main className={styles.section}>
       <div className={`container ${styles.grid}`}>
-        <div className="card">
-          <img className="card__media" src={student.photo} alt="" />
-          <div className="card__body">
-            <h1 className={`card__title ${styles.title}`}>{student.name}</h1>
-            <p className="card__text">{student.tagline}</p>
+        <section className={styles.profileCard} aria-labelledby="student-name">
+          <div className={styles.avatarWrap}>
+            <img className={styles.avatar} src={student.photo} alt={student.name} />
           </div>
-        </div>
+          <div className={styles.profileBody}>
+            <h1 id="student-name" className={styles.title}>
+              {student.name}
+            </h1>
+            <p className={styles.tagline}>{student.tagline}</p>
+          </div>
+        </section>
         <div>
           <h2 className={styles.subTitle}>О студенте</h2>
           <p className={styles.muted}>{student.bio ?? 'Описание скоро появится.'}</p>
           {student.links && student.links.length > 0 && (
             <div className={styles.links}>
               {student.links.map((l) => (
-                <a key={l.url} className="btn" href={l.url} target="_blank" rel="noreferrer">
+                <a
+                  key={l.url}
+                  className={`btn ${styles.linkBtn}`}
+                  href={l.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {l.label}
                 </a>
               ))}
