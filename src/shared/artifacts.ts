@@ -5,6 +5,12 @@ import type { Artifact } from "./types";
  */
 const artifacts: Artifact[] = [
   {
+    id: "evgen",
+    title: "Промт Симонов",
+    text: "мастер DeepSeek",
+    image: "/src/assets/artifacts/evgen.jpg",
+  },
+  {
     id: "poster-2025",
     title: "Постер когорта 2025",
     text: "Плакат, который мы сделали на воркшопе дизайна.",

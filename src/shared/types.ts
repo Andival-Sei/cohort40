@@ -20,5 +20,5 @@ export type Artifact = {
   id: string;
   title: string;
   text: string;
-  image?: string;
+  image: string;
 };
