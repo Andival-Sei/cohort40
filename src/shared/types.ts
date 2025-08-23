@@ -11,7 +11,7 @@ export type Student = {
   /** Фото (URL) */
   photo: string;
   /** Необязательное описание на персональной странице */
-  bio?: string;
+  bio: string;
   /** Необязательные ссылки (github, tg, др.) */
   links?: { label: string; url: string }[];
 };

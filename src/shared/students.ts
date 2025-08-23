@@ -6,6 +6,17 @@ import type { Student } from "./types";
  */
 const students: Student[] = [
   {
+    slug: "kir-bari",
+    name: "Кир Бари",
+    tagline: "Frontend",
+    photo: "/src/assets/students/kir.jpg",
+    bio: "Чиловый парень",
+    links: [
+      { label: "GitHub", url: "https://github.com/Andival-Sei" },
+      { label: "Telegram", url: "https://t.me/Andiewahl" },
+    ],
+  },
+  {
     slug: "ivan-ivanov",
     name: "Иван Иванов",
     tagline: "Frontend • React • TypeScript",
@@ -31,6 +42,7 @@ const students: Student[] = [
     tagline: "Mobile • React Native",
     photo:
       "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=640&auto=format&fit=crop",
+    bio: "Увлекаюсь мобильной разработкой и дизайном интерфейсов.",
   },
 ];
 
