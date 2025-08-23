@@ -1,0 +1,46 @@
+@use "../styles/_vars" as *;
+
+.card {
+  border: 1px solid $color-border;
+  background: $color-card;
+  border-radius: $radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+  display: block;
+}
+
+.mediaWrap {
+  aspect-ratio: 16/10;
+  background: #0b0d12;
+  width: 100%;
+  overflow: hidden;
+}
+
+.media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.body {
+  padding: 12px;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.text {
+  margin: 0;
+  color: $color-muted;
+  font-size: 14px;
+}
+
+.desc {
+  margin: 8px 0 0;
+  color: $color-muted;
+  font-size: 13px;
+  line-height: 1.5;
+}

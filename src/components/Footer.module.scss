@@ -1,0 +1,7 @@
+@use "../styles/_vars" as *;
+
+.footer {
+  border-top: 1px solid $color-border;
+  padding: 24px 0;
+  color: $color-muted;
+}

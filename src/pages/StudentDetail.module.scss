@@ -1,0 +1,26 @@
+@use "../styles/_vars" as *;
+
+.section {
+  padding: 28px 0 40px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 320px 1fr;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0 0 6px;
+}
+
+.muted {
+  color: $color-muted;
+}
+
+.links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}

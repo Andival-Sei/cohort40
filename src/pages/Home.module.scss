@@ -1,0 +1,32 @@
+@use "../styles/_vars" as *;
+
+.hero {
+  padding: 56px 0 24px;
+}
+.heroTitle {
+  font-size: 40px;
+  margin: 0 0 12px;
+}
+.heroSubtitle {
+  color: $color-muted;
+  max-width: 720px;
+}
+
+.section {
+  padding: 28px 0 40px;
+}
+.sectionTitle {
+  font-size: 24px;
+  margin: 0 0 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.studentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
