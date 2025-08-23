@@ -8,7 +8,7 @@ const artifacts: Artifact[] = [
     id: "evgen",
     title: "Промт Симонов",
     text: "мастер DeepSeek",
-    image: "/src/assets/artifacts/evgen.jpg",
+    image: "/photo/artifacts/evgen.jpg",
   },
   {
     id: "poster-2025",

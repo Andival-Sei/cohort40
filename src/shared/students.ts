@@ -9,7 +9,7 @@ const students: Student[] = [
     slug: "kir-bari",
     name: "Кир Бари",
     tagline: "Frontend",
-    photo: "/src/assets/students/kir.jpg",
+    photo: "/photo/students/kir.jpg",
     bio: "Чиловый парень",
     links: [
       { label: "GitHub", url: "https://github.com/Andival-Sei" },
