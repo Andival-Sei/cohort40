@@ -7,7 +7,7 @@
 .grid {
   display: grid;
   gap: 18px;
-  grid-template-columns: 520px 1fr;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .title {
@@ -59,6 +59,12 @@
     filter 220ms ease;
 }
 
+@media (max-width: 600px) {
+  .mediaWrap {
+    padding: 10px;
+  }
+}
+
 .media:hover {
   transform: translateY(-2px) scale(1.01);
   box-shadow: 0 14px 38px rgba(0, 0, 0, 0.45);
@@ -78,6 +84,18 @@
 @media (max-width: 1000px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1001px) {
+  .grid {
+    grid-template-columns: 520px 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 24px 0 36px;
   }
 }
 

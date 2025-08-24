@@ -21,11 +21,12 @@
   display: flex;
   gap: 6px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .navLink {
   opacity: 0.9;
-  padding: 8px 10px;
+  padding: 10px 12px;
   border-radius: 10px;
   border: 1px solid transparent;
 }
@@ -53,4 +54,19 @@
 .githubLink:hover {
   border-color: rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.04);
+}
+
+/* Мобильные правки */
+@media (max-width: 900px) {
+  .inner {
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .navLink {
+    padding: 8px 10px;
+  }
+  /* Экономим место — скрываем подпись GitHub, оставляем иконку */
+  .githubLink span {
+    display: none;
+  }
 }
