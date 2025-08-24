@@ -10,9 +10,6 @@ import { useMobileMenu } from './logic'
 export default function Header() {
   const { isMenuOpen, closeMobileMenu, toggleMobileMenu } = useMobileMenu()
 
-  console.dir(isMenuOpen)
-  console.dir(closeMobileMenu)
-  console.dir(isMenuOpen)
   return (
     <header className={styles.header}>
       <a href="#main" className="skip-link btn btn--primary">
