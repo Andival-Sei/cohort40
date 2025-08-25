@@ -5,6 +5,7 @@ import StudentsPage from './pages/Students'
 import StudentDetailPage from './pages/StudentDetail'
 import ArtifactsPage from './pages/Artifacts'
 import ArtifactDetailPage from './pages/ArtifactDetail'
+import InstructionsPage from './pages/Instructions'
 import NotFound from './pages/NotFound'
 
 /**
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
       { path: 'students/:slug', element: <StudentDetailPage /> },
       { path: 'artifacts', element: <ArtifactsPage /> },
       { path: 'artifacts/:id', element: <ArtifactDetailPage /> },
+      { path: 'instructions', element: <InstructionsPage /> },
     ],
   },
 ])

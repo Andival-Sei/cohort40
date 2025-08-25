@@ -52,6 +52,20 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className={styles.section} id="instructions">
+        <div className="container">
+          <h2 className={styles.sectionTitle}>Инструкции</h2>
+          <p className={styles.sectionDescription}>
+            Узнайте, как добавить себя в проект или поделиться своими артефактами
+          </p>
+          <div className={styles.instructionsLink}>
+            <a href="/instructions" className={styles.instructionsButton}>
+              Открыть инструкции
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

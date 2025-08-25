@@ -1,0 +1,249 @@
+// Стили для страницы инструкций
+@use '../../styles/_vars' as *;
+
+.instructions {
+  padding: 2rem 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b0d12 0%, $color-bg 100%);
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color-fg;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: $gradient-accent;
+      border-radius: 2px;
+    }
+  }
+
+  .instruction {
+    background: $color-card;
+    border-radius: $radius-lg;
+    box-shadow: $shadow;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid $color-border;
+
+    .instructionTitle {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: $color-fg;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid $color-border;
+    }
+
+    .instructionContent {
+      .description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: $color-fg;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: $color-elevated;
+        border-radius: 8px;
+        border-left: 4px solid $color-accent;
+      }
+
+      .steps {
+        margin-bottom: 2rem;
+
+        h3 {
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: $color-fg;
+          margin-bottom: 1.5rem;
+        }
+
+        .step {
+          margin-bottom: 1.5rem;
+          padding: 1.5rem;
+          background: $color-elevated;
+          border-radius: $radius;
+          border: 1px solid $color-border;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-lg;
+          }
+
+          h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: $color-accent;
+            margin-bottom: 0.8rem;
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: $color-fg;
+            margin-bottom: 0.8rem;
+          }
+
+          .code {
+            background: #1a1b1e;
+            color: $color-fg;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border-left: 4px solid $color-accent;
+
+            code {
+              font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+              font-size: 0.9rem;
+              line-height: 1.4;
+            }
+          }
+        }
+      }
+
+      .important {
+        background: rgba(255, 204, 0, 0.1);
+        border: 1px solid rgba(255, 204, 0, 0.3);
+        border-radius: $radius;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+
+        h3 {
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: $color-accent;
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+
+          &::before {
+            content: '⚠️';
+            margin-right: 8px;
+            font-size: 1.2rem;
+          }
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            padding: 0.5rem 0;
+            color: $color-fg;
+            position: relative;
+            padding-left: 1.5rem;
+
+            &::before {
+              content: '•';
+              color: $color-accent;
+              font-weight: bold;
+              position: absolute;
+              left: 0;
+            }
+          }
+        }
+      }
+
+      .help {
+        background: rgba(163, 255, 176, 0.1);
+        border: 1px solid rgba(163, 255, 176, 0.3);
+        border-radius: $radius;
+        padding: 1.5rem;
+        text-align: center;
+
+        h3 {
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: $color-accent-2;
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &::before {
+            content: '💡';
+            margin-right: 8px;
+            font-size: 1.2rem;
+          }
+        }
+
+        p {
+          color: $color-fg;
+          font-size: 1rem;
+          line-height: 1.5;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .link {
+    color: $color-accent;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-accent-2;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Адаптивность для мобильных устройств
+@media (max-width: 768px) {
+  .instructions {
+    padding: 1rem 0;
+
+    .title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .instruction {
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      .instructionTitle {
+        font-size: 1.5rem;
+      }
+
+      .instructionContent {
+        .description {
+          font-size: 1rem;
+          padding: 0.8rem;
+        }
+
+        .steps {
+          .step {
+            padding: 1rem;
+
+            h4 {
+              font-size: 1.1rem;
+            }
+
+            .code {
+              padding: 0.8rem;
+              font-size: 0.8rem;
+            }
+          }
+        }
+
+        .important,
+        .help {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
