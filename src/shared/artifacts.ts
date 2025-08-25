@@ -15,17 +15,8 @@ const artifacts: Artifact[] = [
     id: 'ls-open',
     title: 'ЛС открыт',
     text: 'Плакат, который мы сделали на воркшопе дизайна.',
-    image:
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=640&auto=format&fit=crop',
+    image: '/photo/artifacts/ls-otkroi.jpg',
     desc: 'Плакат, собранный на воркшопе: композиция, сетка, контраст. Исходники лежат в репозитории — можно распечатать в формате A2.',
-  },
-  {
-    id: 'test',
-    title: 'Тест',
-    text: 'Коллекция худи с логотипом когорты.',
-    image:
-      'https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=640&auto=format&fit=crop',
-    desc: 'Мерч ограниченного тиража. Цвета и типографика согласованы с гайдлайнами. Предзаказ закрыт, но можно добавить себя в вейтлист.',
   },
 ]
 
