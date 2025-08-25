@@ -17,6 +17,17 @@ const students: Student[] = [
     ],
   },
   {
+    slug: 'Triganus',
+    name: 'Pavel Bosy',
+    tagline: 'Frontend',
+    photo: '/photo/students/pavel.jpg',
+    bio: 'Люблю чистый код и удобные интерфейсы. Учусь и делаю pet-проекты.',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/Triganus' },
+      { label: 'Telegram', url: 'https://t.me/Triganusnikus2312' },
+    ],
+  },
+  {
     slug: 'ivan-ivanov',
     name: 'Иван Иванов',
     tagline: 'Frontend • React • TypeScript',
