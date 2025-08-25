@@ -18,6 +18,13 @@ const artifacts: Artifact[] = [
     image: '/photo/artifacts/ls-otkroi.jpg',
     desc: 'Плакат, собранный на воркшопе: композиция, сетка, контраст. Исходники лежат в репозитории — можно распечатать в формате A2.',
   },
+  {
+    id: 'matriza',
+    title: 'Матрица',
+    text: 'Тайны бытия',
+    image: '/photo/artifacts/matriza.jpg',
+    desc: 'Эксперимент с промт-инжинирингом: как настраивать модели и получать стабильные результаты. Фото — наш мем из чата.',
+  },
 ]
 
 export default artifacts
