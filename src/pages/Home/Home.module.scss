@@ -109,4 +109,25 @@
   .heroSubtitle {
     font-size: 15px;
   }
+
+  .instructionsButton {
+    padding: 14px 24px;
+    font-size: 15px;
+
+    &::before {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .instructionsButton {
+    padding: 12px 20px;
+    font-size: 14px;
+    gap: 8px;
+
+    &::before {
+      font-size: 15px;
+    }
+  }
 }

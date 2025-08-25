@@ -2,6 +2,7 @@ import Card from '../../components/Card'
 import { useHomeData } from './logic'
 import styles from './Home.module.scss'
 import type { Student, Artifact } from '../../shared/types'
+import { Link } from 'react-router-dom'
 
 /** Главная страница: геро-секция, список студентов, артефактов. */
 export default function Home() {
@@ -60,9 +61,9 @@ export default function Home() {
             Узнайте, как добавить себя в проект или поделиться своими артефактами
           </p>
           <div className={styles.instructionsLink}>
-            <a href="/instructions" className={styles.instructionsButton}>
+            <Link to="/instructions" className={styles.instructionsButton}>
               Открыть инструкции
-            </a>
+            </Link>
           </div>
         </div>
       </section>

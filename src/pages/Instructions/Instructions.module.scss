@@ -208,33 +208,60 @@
     .title {
       font-size: 2rem;
       margin-bottom: 2rem;
+
+      &::after {
+        width: 60px;
+        height: 3px;
+      }
     }
 
     .instruction {
       padding: 1.5rem;
       margin-bottom: 1.5rem;
+      border-radius: 12px;
 
       .instructionTitle {
         font-size: 1.5rem;
+        margin-bottom: 1rem;
       }
 
       .instructionContent {
         .description {
           font-size: 1rem;
           padding: 0.8rem;
+          margin-bottom: 1.5rem;
         }
 
         .steps {
+          margin-bottom: 1.5rem;
+
+          h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+          }
+
           .step {
             padding: 1rem;
+            margin-bottom: 1rem;
 
             h4 {
               font-size: 1.1rem;
+              margin-bottom: 0.6rem;
+            }
+
+            p {
+              font-size: 0.95rem;
+              margin-bottom: 0.6rem;
             }
 
             .code {
               padding: 0.8rem;
               font-size: 0.8rem;
+              margin: 0.8rem 0;
+
+              code {
+                font-size: 0.75rem;
+              }
             }
           }
         }
@@ -242,6 +269,76 @@
         .important,
         .help {
           padding: 1rem;
+          margin-bottom: 1.5rem;
+
+          h3 {
+            font-size: 1.2rem;
+          }
+
+          ul li {
+            font-size: 0.95rem;
+            padding: 0.4rem 0;
+          }
+
+          p {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Дополнительная адаптация для очень маленьких экранов
+@media (max-width: 480px) {
+  .instructions {
+    padding: 0.5rem 0;
+
+    .title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .instruction {
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      .instructionTitle {
+        font-size: 1.3rem;
+      }
+
+      .instructionContent {
+        .description {
+          padding: 0.6rem;
+          font-size: 0.95rem;
+        }
+
+        .steps {
+          .step {
+            padding: 0.8rem;
+
+            h4 {
+              font-size: 1rem;
+            }
+
+            p {
+              font-size: 0.9rem;
+            }
+
+            .code {
+              padding: 0.6rem;
+              font-size: 0.75rem;
+            }
+          }
+        }
+
+        .important,
+        .help {
+          padding: 0.8rem;
+
+          h3 {
+            font-size: 1.1rem;
+          }
         }
       }
     }
